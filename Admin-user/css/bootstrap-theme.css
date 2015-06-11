@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+.form-group {margin-bottom: 0px;  clear: both;position: relative;}
+.nav-tabs{margin:15px 0px 20px 0px; border-bottom: 1px solid #B4B4B4;}
+.nav-tabs>li { border:none; margin-bottom:0;}
+.nav-tabs>li>a { color:#333333 !important; border:none; border-bottom: 4px solid transparent; font-size: 24px; font-family: 'Conv_CiscoSansThin'; color: #1398D0;}
+.nav-tabs>li>a:hover { background:none;border-bottom: 4px solid #1398D0;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { color:#1398D0 !important; border:none; background:none; border-bottom: 4px solid #1398D0;}
