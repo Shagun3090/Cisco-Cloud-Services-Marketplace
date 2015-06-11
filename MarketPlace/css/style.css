@@ -1,0 +1,730 @@
+@charset "utf-8";
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Conv_CiscoSansThin';
+	src: url('../fonts/CiscoSansThin.eot');
+	src: local('☺'), url('../fonts/CiscoSansThin.woff') format('woff'), url('../fonts/CiscoSansThin.ttf') format('truetype'), url('../fonts/CiscoSansThin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_CiscoSansRegular';
+	src: url('../fonts/CiscoSansRegular.eot');
+	src: local('☺'), url('../fonts/CiscoSansRegular.woff') format('woff'), url('../fonts/CiscoSansRegular.ttf') format('truetype'), url('../fonts/CiscoSansRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_CiscoSansExtraLight';
+	src: url('../fonts/CiscoSansExtraLight.eot');
+	src: local('☺'), url('../fonts/CiscoSansExtraLight.woff') format('woff'), url('../fonts/CiscoSansExtraLight.ttf') format('truetype'), url('../fonts/CiscoSansExtraLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+*, body{font-size:13px; font-family: 'Conv_CiscoSansThin'; word-wrap: break-word; color: #333333;  -webkit-font-smoothing: antialiased; outline:none !important; margin:0px; padding:0; list-style:none;font-weight:400!important;}
+p, h4, label, button{font-family: 'Conv_CiscoSansRegular';}
+a, a:hover, a:focus {color: #0096D6; outline:none; font-family: 'Conv_CiscoSansExtraLight';text-decoration: none;}
+textarea, input, .btn{outline: medium none;resize: none;}
+textarea, input, select {display: inline-block;}
+.error { background-color: #faeaea !important; border-color: #cf2030 !important;}
+.error:hover, .error:focus, .error:active { border-color: #cf2030 !important;}
+
+/**** Form Elements ****/
+/* Custom radio button and checkboxes
+===============================================*/
+.radios {padding-top: 18px; background: url(../images/css/divider.png) repeat-x 0 0;}
+.label_check input, .label_radio input { margin-right: 5px; vertical-align:text-bottom;}
+.has-js .label_radio {padding:6px 0 4px 23px;line-height:15px; margin: 0 15px 0px 0px;  display: inline-block;  vertical-align: middle; box-shadow: none;
+  outline: none; border: none !important;}
+
+.radio {text-transform: capitalize;font-size: 14px;font-family: 'Conv_CiscoSansExtraLight';line-height: 22px;}
+/*.has-js .label_radio:hover{background:url(../images/Radio-buttons.jpg) no-repeat -17px -85px; }*/
+@media screen and (min-width:0\0) {.has-js .label_radio {background:url(../images/Radio-buttons.png) no-repeat -17px -3px; }}
+@media screen and (min-width:0\0) { .has-js label.r_on {background:url(../images/Radio-buttons.png) no-repeat -17px -25px; }}
+.has-js .label_radio {background:url(../images/Radio-buttons.png) no-repeat  -20px -3px;}
+.has-js label.r_on { background:url(../images/Radio-buttons.png) no-repeat -20px -188px !important; }
+
+.label_radio.disable-btn.r_off.r_dis { background: url(../images/Radio-buttons.png) no-repeat -17px -65px; }
+@media screen and (min-width:0\0) { .label_radio.disable-btn.r_off.r_dis {background: url(../images/Radio-buttons.png) no-repeat -17px -67px; }}
+.has-js label.c_on { background: url(images/Radio-buttons.png) no-repeat 0 0;}
+.has-js .label_check input, .has-js .label_radio input {position: absolute; left: -9999px;}
+.has-js .label_check, .has-js .label_check { background:url(../images/check-button.png) no-repeat; float: left; height:20px; width:20px; background-position:-20px -3px; margin:0 15px 15px 0;}
+.has-js label.c_on {background:url(../images/check-button.png) no-repeat; background-position:-20px -43px;}
+.has-js .label_radio.red.r_off {background-position: 0px -240px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.orng.r_off {background-position: 0px -419px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.lightGreen.r_off {background-position: 0px -598px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.green.r_off {background-position: 0px -778px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.darkGreen.r_off {background-position: 0px -958px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.red.r_on {background-position: 0px -334px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.orng.r_on {background-position: 0px -513px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.lightGreen.r_on {background-position: 0px -692px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.green.r_on {background-position: 0px -872px; padding:4px 0px 5px 29px;}
+.has-js .label_radio.darkGreen.r_on {background-position: 0px -1052px; padding:4px 0px 5px 29px;}
+/**** Custom Selectbox CSS ****/
+.sbHolderDisabled,.textareaDisable{opacity:0.3; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter: alpha(opacity=30); -khtml-opacity: 0.3;}
+.sbHolder{background:#fff; float:right; border: 1px solid #bbbbbb;   margin:5px 0;  padding: 5px 10px;  width: 100%; position:relative; text-indent: 0.01px; text-overflow: ""; cursor: pointer; height: 37px; outline:none;}
+.sbHolder.sbHolderActive{ border: 1px solid #0096D6;/*background:url(../images/btn-blue.jpg) repeat-x scroll left top #1884c6;border-color:#0e6293 #0e6293 #0e6293 #0e6293;color:#fff   -webkit-box-shadow: 0px -1px 2px #0096D6;box-shadow: 0px 0px 1px 1px #0096D6 inset;*/}
+.sbSelector{display:block;height:30px;left:0;line-height:34px;outline:medium none;overflow:hidden;position:absolute;text-indent:8px;top:0;text-overflow:ellipsis;white-space:nowrap;width:100%;  box-sizing: border-box;padding-right: 23px !important;}
+.sbHolder a.sbSelector:link, .sbHolder a.sbSelector:visited{outline:0;text-decoration:none;display:block;font-size:13px;  font-family: 'Conv_CiscoSansExtraLight'; font-weight:normal; color:#999999;}
+@media screen and (-webkit-min-device-pixel-ratio:0) { .sbHolder a.sbSelector:link, .sbHolder a.sbSelector:visited{padding:2px 0 0;}}
+@media screen and (min-width:0\0) {.sbHolder a.sbSelector:link, .sbHolder a.sbSelector:visited{padding:2px 0 0;}}
+.sbToggle{background:url(../images/dropdown.png) no-repeat;background-position:0 11px;display:block;height:29px;outline:0;position:absolute;right:1rem;top:4px;width:23px;z-index:1;}
+/*.sbHolder:hover .sbToggle{background-position:0 -63px}*/
+.sbToggle.sbToggleOpen {background-position: 0 -8px;}
+.sbHolder:hover a.sbSelector{/*color:#fff !important;*/}
+.sbOptions{border:1px solid #0096D6;border-top:none;background:#FFF;list-style:none;left:-1px;margin:0;padding:0;position:absolute;top:35px !important;z-index:100;overflow-y:auto;-moz-box-shadow:0px -1px 2px  #0096D6;-webkit-box-shadow:0px -1px 2px  #0096D6;box-shadow: 0px -1px 2px #0096D6 inset; width:100%;z-index:99999;}
+.sbOptions li{display:block;float:none;width:auto;padding:0;font-size:12px;/*border-bottom:1px solid #d2d1d1;*/}
+.sbOptions li:hover{background:#eee;}
+.sbOptions li:first-child{border-top:0 solid #e1e0e0;}
+.sbOptions li:last-child{border-bottom:0 solid #d2d1d1;}
+.sbOptions a{display:block;outline:0;color: #333333 !important;padding: 12px 8px 8px;text-decoration:none;font-size:1.083em;line-height:normal;   font-family: 'Conv_CiscoSansExtraLight'; font-weight:normal;}
+.sbOptions a:hover {text-decoration:none;color:#ffffff !important;}
+.sbHolderDisabled:hover{background:url(../images/selectboxBG.png) repeat-x;border-color:#afafaf #afafaf #afafaf #afafaf;}
+.sbHolderDisabled:hover .sbToggle{background:url(../images/selectArrow.png) no-repeat;background-position:0 -4px;}
+.sbHolderDisabled:hover a.sbSelector{color:#666!important;}
+.sbHolderDisabled:hover, .sbHolderDisabled:hover .sbToggle, .sbHolderDisabled:hover a.sbSelector{cursor:not-allowed!important;}
+/*  Selectbox improvment */
+.sbOptions{ box-shadow : 0px -1px 2px rgba(0, 150, 214, 0.52) inset; top:28px  !important;}
+.sbOptions a { font-size:13px; line-height:31px;  padding:0 8px;  }
+.sbOptions li:hover a { color:#fff;}
+.sbHolder { height:30px;}
+.sbToggle { height:20px; top:0px; width:12px;}
+.sbHolder a.sbSelector:link, .sbHolder a.sbSelector:visited{padding:0; line-height:30px;}
+.sbHolder a.sbSelector{color:#333;}
+.sbSelector.selected-option{color:#333 !important;}
+/* Multiple Selectbox with LI
+=====================================================================*/
+.ui-multiselect-menu {display:none; padding:3px; position:absolute; z-index:10000; text-align: left;}
+.ui-multiselect-checkboxes {overflow-y: auto;}
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label {border:none;}
+/* Selectbox with LI=====================================================================*/
+.ui-multiselect {height:25px!important; padding-left:0px;}
+.ui-multiselect  span{line-height:21px!important;}
+.ui-multiselect{display:block; float:left; background:url(../images/selectboxBG.png) repeat-x #dadada; border:1px solid #afafaf; border-radius:3px; color: #666; height: 23px; margin: 0; position: relative; width:99%; font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:12px;}
+.ui-multiselect:hover {background: url(../images/btn-blue.jpg) repeat-x scroll left top #1884C6; border-color: #0e6293 #0e6293 #0e6293 #0e6293; color:#FFFFFF;}
+.ui-multiselect .ui-icon {background:url(../images/selectArrow.png) no-repeat; font-family: 'Conv_CiscoSansExtraLight';background-position:0 -3px; display: block; height:23px; *height:21px; outline: none; position: absolute; right:0px; top:0px; width:29px!important; z-index:10;}
+ .ui-multiselect span{padding:0px;text-align:left;display: block;height: 23px;line-height:25px;outline: medium none; overflow: hidden; float:left; text-indent: 8px; top: 0; width: 78%; text-overflow:ellipsis; white-space: nowrap;}
+.ui-multiselect:hover .ui-icon{background-position:0 -62px;}
+/*@media screen and (min-width:0\0) {.ui-multiselect-menu, .sbOptions{width:100.7%;}}*/
+.ui-multiselect-menu li, .sbOptions li, .productFamilyGroup li {clear:both; display:block; float: none; width: auto; padding:0px; font-size:12px;/* border-bottom:1px solid #d2d1d1;*/}
+.ui-multiselect-menu li:hover, .sbOptions li:hover, .productFamilyGroup ul li:hover, .sbFocus {background:#0096D6 !important; color:#fff;}
+.ui-multiselect-menu li:first-child, .sbOptions li:first-child , .productFamilyGroup li:first-child{border-top:0px solid #e1e0e0;}
+.ui-multiselect-menu label{display: block; outline: none; color:#666 !important; padding:6px 5px; display:block; text-decoration:none; font-size:1.083em; font-weight:bold; line-height:normal;}
+.ui-multiselect-header{display:none;}
+.ui-multiselect-checkboxes li, .ui-multiselect-checkboxes li label {padding:5px; display:block;}
+.ui-multiselect-checkboxes li label{padding:0px; outline:none;}
+.ui-multiselect-checkboxes li label input[type="checkbox"]{ float:left; margin:3px 4px;}
+.ui-multiselect-checkboxes li label span{display:inline-block; float:left; font-weight:700;}
+.ui-widget-footer{background:#f2f2f2; padding:10px; text-align:right; border-top:1px solid #ccc;}
+.ui-widget-footer .btn{margin-left:10px;}
+.sbHolder:focus, .sbHolder:active{outline:none;/* border: 1px solid #0096D6;/*-moz-box-shadow:0px -1px 2px  #0096D6;-webkit-box-shadow:0px -1px 2px  #0096D6;box-shadow: 0px -1px 2px #0096D6 inset;border-bottom:none;*/}
+
+
+/**  Input Button Formatting **/ 
+.btn {display: inline-block;padding: 0px 12px;margin-bottom: 0;font-weight: 400;line-height: 30px;text-align: center;white-space: nowrap;vertical-align: middle;font-family: 'Conv_CiscoSansExtraLight';font-size: 13px;line-height: 30px;height: 30px;width:auto;min-width:100px;}
+.btn { min-width:100px;border-radius:0px;}
+.btn.blue-btn { border:solid 1px #0096d6;}
+.btn.blue-btn:hover{background:#FFF; color:#0096d6;}
+.btn.blue-btn {background: #0096D6;border-radius: 0;color: #fff;font-weight: bold;}
+.btn.right-btn {float: right; margin-left: 10px;}
+.btn.grey-btn { background:#fff;}
+.btn.grey-btn {background:#fff;border: 1px solid #0096d6; border-radius:0; color:#0096d6;}
+.btn.grey-btn:hover {background: #0096D6;color: #ffffff;}
+.btn.middle-btn {float: right; margin-left: 10px;}
+.btn.left-btn{float: right; }
+.disable-btn{  border: solid 1px #CCC;background: #EEEEEE;color: #CCC;cursor: default;}
+.disable-btn:hover { background: #EEEEEE;color: #CCC !important;}
+
+/* Individual class for Remove button formatting */
+.btn.disable-btn { border:solid 1px #CCC; background:#EEEEEE !important ; color:#CCC; cursor:default;}
+.btn.disable-btn:hover { background:#EEEEEE;  color:#CCC; }
+.btn.disable-btn:focus { outline:none; box-shadow:none;}
+
+input[type=text].calendar{ border: 1px solid #b4b4b4; border-radius:0; box-shadow:none;  color: #999; font-family: "Conv_CiscoSansThin"; margin: 0; padding: 0px 6px; line-height:30px; height:30px; background: url(../images/calendar.png) 95% center no-repeat;  }
+input[type=text].calendar:hover, input[type=text].calendar:focus{ }
+
+/*tooltip css*/
+.tooltip{ opacity:1; position:relative;}
+.tipsy {padding:5px; font-size:11px; position:absolute; z-index:100000;}
+.tipsy-inner {padding:3px 10px; background-color:#000; color:#fff; font-weight:bold; max-width:250px; text-align:left; border:1px solid #000;}
+.tipsy-inner {border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -webkit-border-radius:4px;}
+.tipsy-arrow {position:absolute; background:url(../images/tipsy.gif) no-repeat top left; width:9px; height:5px;}
+.tipsy-n .tipsy-arrow {top:0; left:50%; margin-left:-4px;}
+.tipsy-nw .tipsy-arrow {top:0; left:10px;}
+.tipsy-ne .tipsy-arrow {top:0; right:10px;}
+.tipsy-s .tipsy-arrow {bottom:0; left:50%; margin-left:-4px; background-position:bottom left;}
+.tipsy-sw .tipsy-arrow {bottom:0; left:10px; background-position:bottom left;}
+.tipsy-se .tipsy-arrow {bottom:0; right:10px; background-position:bottom left; margin-top:4px;}
+.tipsy-e .tipsy-arrow {top:50%; margin-top:-4px; right:0; width:5px; height:9px; background-position:top right;}
+.tipsy-w .tipsy-arrow {top:50%; margin-top:-4px; left:0; width:5px; height:9px;}
+/*tooltip css*/
+
+
+/*fancybox css*/
+.fancybox-wrap { z-index:9999;}
+.fancybox-skin {position:relative;color:#454545;text-shadow: none;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; z-index:1000; background-color:#fff; padding:50px !important; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);}
+.fancybox-skin .fancybox-close{ background:url(../images/close.png) 0 0 no-repeat; width:29px; height:29px; top:20px; right:20px}
+.fancybox-skin .fancybox-close:hover{background-position:0 -41px}
+/*** Form Element Library Ends ***/
+
+/** Header Section Formatting **/
+.header-container { width:1024px;}
+.header-top{background:#fff; width:100%; /*border-bottom:1px solid #d8d8d8;*/}
+.fix-container{max-width:1012px; width:100%; margin:0 auto;}
+.header-top-left {margin: 17px 0; float: left; width: auto;}
+.logo {float: left;}
+.header-top-left i {float: left; font-size: 26px; font-style: normal; margin: 4px 4px 4px 20px; font-family: 'Conv_CiscoSansExtraLight';}
+.header-top-right {float: right; width: auto;}
+.header-top-right ul {float: right; padding: 0; margin:0;}
+.header-top-right li {display: inline; float: left; list-style:none; padding:0 26px;}
+.header-top-right li:last-child {padding-right: 0}
+.header-top-right a {float:left;font-family: 'Conv_CiscoSansExtraLight'; color: #666; font-size: 16px; padding:32px 2px 20px;border-bottom:5px solid transparent;-webkit-transition: all 0.1s ease-in-out;-moz-transition: all 0.1s ease-in-out;-o-transition: all 0.1s ease-in-out; transition: all 1s ease-in-out;}
+.header-top-right li:hover a, .header-top-right li.active a{border-bottom:5px solid #0096d6;  color: #0096d6;}
+.header-middle{background:url(../images/ManagementPortal.png) center top no-repeat; float:left; width:100%;}
+.header-middle h1 {color: #fff; font-size: 50px;  margin: 0; padding: 66px 0; text-align: center;}
+.header-middle-nav {width:100%; background:rgba(255, 255, 255, 0.8); float: left; width: 100%;}
+.header-middle-nav ul {float: left; margin: 0; padding: 0; width: 100%;}
+.header-top-right li a i{background:url(../images/support-dropdown-arrow.png)no-repeat;display:inline-block;height:8px;width:16px;}
+
+/** Account Notification Section Formatting **/
+.account-panel-info{ width:1008px;}
+.account-panel-info{text-align:center;  width: 1024px; margin-top:8%;}
+.account-panel-info i { background:url(../images/ip-error-icons.png)no-repeat;  width: 65px;height: 65px;display:inline-block; }
+.account-panel-info i.high-warning{ background-position: 0px 0px;}
+.account-panel-info i.warning{ background-position: 0px 0px;}
+.account-panel-info i.alert{ background-position: 0px -80px;}
+.direction-panel{  width:500px; text-align:center;}
+.account-panel-info h1 {color: #7cbb59;  font-size: 48px; line-height:60px;  font-family: 'Conv_CiscoSansThin'; margin:0px 0px 10px 0px;}
+.account-panel-info h2{font-family:'Conv_CiscoSansThin';font-size:36px;color:#333333;padding: 15px 0 0px;line-height: 48px;  margin-bottom: 7px;}
+.account-panel-info i.alert-warning {background-position:1px -152px;height:57px;}
+.account-panel-info p a{font-family: 'Conv_CiscoSansExtraLight';font-size:16px;color:#0096d6;}
+.direction-panel p{font-family: 'Conv_CiscoSansExtraLight';font-size:16px;color:#333333;line-height: 24px;margin: 0px 0px 11px;}
+.account-panel-info i.dpl-alert{background-position:1px;}
+.dpl-option-list { padding: 0px 113px;}
+.account-panel-info p{font-family: 'Conv_CiscoSansExtraLight';font-size:16px;color:#333333;line-height: 24px;margin: 0px 0px 14px;}
+.action-panel {margin:94px auto 40px; width:170px; display:block;}
+.action-panel .back-icon {background:url(../images/email-icons.png) -33px 0px no-repeat; display: block; height: 24px; margin: 0 auto; width: 38px;}
+.action-panel .continue-icon {background:url(../images/email-icons.png) -65px 0px no-repeat; display: block; height: 24px; margin: 0 auto; width: 38px;}
+.action-panel .contact-icon {background: url(../images/email-icons.png) 3px 0px no-repeat;display: block;height: 24px;margin: 0 auto;width: 38px;} 
+.action-panel h5 {font-size: 24px;  margin: 25px 0 8px; color:#333333; font-family: 'Conv_CiscoSansThin';}
+.action-panel:hover .back-icon { background-position:-33px -32px;}
+.action-panel:hover .continue-icon { background-position:-65px -32px;}
+.action-panel:hover .contact-icon {   background-position: 3px -32px;}
+.action-panel:hover h5, .action-panel:hover p { color:#0096D6;}
+.account-panel-info h6{font-family: 'Conv_CiscoSansThin';font-size:16px;color:#333333;line-height: 15px;  margin-bottom: 7px;} add below 
+.process-box{width: 900px;}
+.ip-details{}
+.opt-list{ float:left; text-align:left; clear:both; font-size:16px; line-height:18px;}
+.ip-label{font-family: 'Conv_CiscoSansRegular'; font-size: 13px; font-weight:700; color: #333333; text-align:right;  line-height: 24px;padding:0px 10px 0px;}
+.ip-value{font-family: 'Conv_CiscoSansExtraLight'; font-size: 13px; color: #333333; text-align:left;line-height: 24px;padding:0px 0px 0px 10px;}
+.process-list{ width:100%; text-align:left; display:block; padding: 5px 0 5px 20px; box-sizing: border-box;}
+.process-list li {list-style-type: disc; font-size:16px; line-height:18px; color:#333; padding:3px 0; }
+.service-form {float: left;margin: 10px 0;width: 100%;}
+.personal-info {margin: 25px 0px 0px;}
+
+/** User Form's  Section Formatting **/
+.form-wrap { padding:0 15px;  margin: 10% auto 0;}
+.form-cloud { margin: 0 auto; max-width: 420px;}
+.form-wrap h2 { padding:15px 0 7px; margin: 0; text-align: center; font-size:36px; word-wrap: break-word;font-family: 'Conv_CiscoSansThin';line-height: 48px;}
+.form-wrap h6 { padding:0px 0 20px; margin: 0; text-align: center; font-size:20px; word-wrap: break-word; }
+.form-input {  font-family: 'Conv_CiscoSansExtraLight'; border: 1px solid #BBBBBB; float: left; margin: 5px 0;padding: 5px 10px; width: 100%;/*font-family: 'Conv_CiscoSansThin';*/  box-shadow:none}
+.form-input:active, .form-input:focus, .sbHolder:focus{border: 1px solid #0096D6 !important; ;-moz-box-shadow: inset 0 0 4px #0096D6;-webkit-box-shadow: inset 0 0 4px #0096D6;box-shadow: inset 0 0 4px #0096D6;}
+.form-input:hover, .form-input:focus, .form-input:active {border:1px solid #999999}
+.form-checkbox {font-family: 'Conv_CiscoSansExtraLight'; float: left; margin:5px 0 0; line-height: 24px; width: 100%; text-align:left;}
+.forgt-pass {font-family: 'Conv_CiscoSansExtraLight'; color: #0096D6;  float: right;}
+.form-checkbox label input[type="checkbox"]{float: left; margin: 2px 5px 0 0;}
+.form-checkbox label {font-weight: 300;}
+.form-btn {float: left; width: 100%; margin:5px 0px; position:relative}
+
+/** User Info Panel **/
+.user-info-panel{ width:600px;}
+.user-info-panel .signup-left { padding-right:35px;}
+.user-info-panel .signup-right { padding-left:35px;}
+.user-info-panel h2{color: #434343;text-align: center;font-size: 36px !important;margin: 20px 0 13px;}
+.user-info-panel h3{color: #434343;text-align: center;font-size: 20px;margin: 0 0 20px;}
+.product-check  { float:left; width:100%;}
+.payment-inner { margin: 0 30px 20px 0; float:left;}
+.product-check .payment-inner .radio {margin: 0px 20px 0px 0px;}
+.user-label {padding: 10px 0;display:block; color: #333333; width: auto; font-family: 'Conv_CiscoSansRegular'; font-weight:normal;line-height: 21px;}
+.cancel-pass{ display:none;}
+.change-pass{ display:block;}
+/** Captcha  Section Formatting **/
+#captcha-wrap {float: left;margin: 5px 0; width: 100%;}
+.captcha-box {float: left;}
+.captcha-action {background: none; border:none; float: left; margin: 5px 0 0 7px; padding: 0;}
+.captcha-text-box {float: right; width: 59%;}
+.captcha-text-box input{float: right; border: 1px solid #BBBBBB;width: 100%;margin:0;}
+.sign-captcha {max-width: 420px; margin: 5px 0px 15px !important;}
+
+/** Validation  Section Formatting **/
+.validation-error{font-size:13px;font-family: 'Conv_CiscoSansExtraLight';color:#333333;}
+.validation-error span{color:#cf2030;font-size:13px;font-family: 'Conv_CiscoSansExtraLight';}
+.service-form h4 {height: 22px;text-align: left; color: #434343; font-size: 20px; font-weight: 300; float:left; width:100%; margin: 0px 0px 10px; font-family: 'Conv_CiscoSansRegular';s}
+.product-optn {float: left;width: 100%;}
+.sign-captcha.float-right{ float:right !important;}
+.signup-txt{color: #333333; float: left;  font-size: 13px;  margin: 15px 0px 20px;; width: 100%; text-align: left;font-family:'Conv_CiscoSansExtraLight';}
+.signup-txt span{font-family: 'Conv_CiscoSansRegular';}
+.product-optn p {font-family: 'Conv_CiscoSansExtraLight';  margin: 0px 0px 10px 0px !important;}
+.security-info{float: left;margin: 30px 0 20px;width: 100%;}
+.address-mismatch-content p {color: #cf2030;font-size: 13px;font-family: 'Conv_CiscoSansExtraLight';line-height: 18px;clear: both;}
+.form-input.error:active, .form-input.error:focus, .form-input.validate-field.red-border { background-color: #faeaea !important; border-color: #cf2030 !important; box-shadow: none;}
+ul.userIdHints {list-style-type: none; padding: 0; min-height:110px;margin-bottom: 5px;}
+ul.userIdHints li {padding:3px 0 2px 26px; display:block;font-size: 13px;line-height: 20px;color: #333;font-family:'Conv_CiscoSansExtraLight';}
+ul.userIdHints li.cross{ background:url(../images/blocked-error-icon.png) 0 3px no-repeat; background-size:16px 16px}
+ul.userIdHints li.check{background:url(../images/check.png) 0 5px no-repeat; background-size:16px 13px}
+
+/**Sign-in Section**/
+.blue-btn.sign-btn { width: 100%;}
+.signin-acc-creation p{margin: 16px 0 0;float: left;text-align: center;width: 100%;}
+.signin-acc-creation a{float: left;text-align: center;width: 100%;}
+.confirm-page {float: left;margin: 60px 0 0;width: 100%;}
+.sent-page {text-align: center;top: 13%;}
+.sent-page h1 {color: #7cbb59; font-size: 48px; margin: 40px 0px 0px;font-family: 'Conv_CiscoSansThin';}
+.sent-page h2 {padding: 30px 0 0;font-size: 36px;font-family: 'Conv_CiscoSansExtraLight';}
+.page-info {margin: 0 auto;padding: 20px 0 10px;text-align: center;width: 49%;font-family: 'Conv_CiscoSansExtraLight';}
+.expdate-select { width: 100%;float: left;}
+.divide {float: left; width: 100%;}
+.divide-left {float: left;margin: 0 1% 0 0;width: 49%;}
+.divide-right {float: left;margin: 0 0 0 1%;width: 49%;}
+.reset-gp{float: left;width: 100%;}
+.reset-gp p{font-size:13px;font-family: 'Conv_CiscoSansExtraLight';  margin: 20px 0px 0px;}
+.address-mismatch-content{clear:both;padding:3px 0px 0px;}
+.address-mismatch-content p{color:#cf2030;font-size:13px;font-family: 'Conv_CiscoSansExtraLight';line-height:18px;clear:both;}
+.address-mismatch-content h4{font-size: 20px;color:#333333;font-weight:normal;font-family: 'Conv_CiscoSansExtraLight';}
+.address-mismatch-content .label-signup .radio label{padding: 0px 15px 10px 33px; font-family: 'Conv_CiscoSansExtraLight';}
+.validation-error span{color:#cf2030}
+.form-group.margin-bottom{margin:0px 0px 30px 0px;}
+form.login-content-section p{ font-family: 'Conv_CiscoSansExtraLight';}
+
+
+.road-map-area{ width: 960px;}
+.bg-row{ position:absolute; left: 176px; top: 33px; height:1px; width: 578px; background: #CCC; z-index: -9; margin: auto;}
+.roadmap-list-box{ display:block; text-align:center; margin:20px 0; padding:0px; position:relative;}
+.roadmap{ display:inline-block; list-style:none; min-width: 210px; }
+.roadmap a{ display:block;}
+.roadmap a i.status { display:block; width:65px; height:65px; margin: auto; background: url(../images/step-icon.jpg) no-repeat; border-radius:50%; background-color:#fff;}
+.roadmap a:hover .status {}
+.roadmap a span { display:block; margin:5px 0; font-family: 'Conv_CiscoSansRegular'; font-size: 14px;}
+.roadmap a:hover span {}
+
+.roadmap a i.status.incomplete { background-position: -3px -133px;}
+.roadmap a:hover i.status.incomplete {background-position:-3px -203px;}
+.roadmap a i.status.in-progress { background-position: -3px -63px;}
+.roadmap a:hover i.status.in-progress {}
+.roadmap a i.status.complete { background-position: -3px 7px;}
+.roadmap a:hover i.status.complete {}
+.bg-row.roadmap-02{left: 390px;  width: 150px;}
+.bg-row.roadmap-03{left: 283px; width: 363px}
+.bg-row.roadmap-04{left: 95px;width: 500px;}
+#popup {background: #fff;padding: 70px;height: 300px;width: 650px;}
+#popup p {font-size: 20px;text-align: center;font-family: 'Conv_CiscoSansRegular';}
+.container.roadmap-section{width:637px;}
+.current-state span{color:#0096d6;font-weight: bold;}
+
+
+
+
+/*User Dashboard Panels */
+.user-dashboard{ background:url(../images/management-portal.png) center top no-repeat; background-size:cover; min-height:240px; padding:0; }
+.user-dashboard-content{ padding:60px 0 0 0; text-align:center; min-height:185px; color: #fff; font-size: 50px;}
+.user-dashboard-nav-outr {background:rgba(255, 255, 255, 0.8); width:100%; margin:5px 0 0 0;  }
+.user-dashboard-nav-inner{width: 1070px; }
+.user-dashboard-nav {}
+.user-dashboard-nav li {float: left; list-style: outside none none; padding:0; width:252px; margin:0 3px 0 0; text-align:center;}
+.user-dashboard-nav li a { display:block;  padding:10px 0; text-align:center; font-family: 'Conv_CiscoSansRegular'; font-size: 20px; color: #333333; border-bottom:solid 1px transparent;}
+.user-dashboard-nav li:hover a, .user-dashboard-nav li.active a{border-bottom:5px solid #1A99D2;}/*53-line*/
+
+/* UI Animation */
+/* Speed 0.5 Second */
+.user-dashboard-nav li, .user-dashboard-nav li a, .add-user-panel, .nav-tabs li a{-webkit-transition: all 0.1s ease-in-out;   -moz-transition: all 0.1s ease-in-out;   -o-transition: all 0.1s ease-in-out;
+transition: all 1s ease-in-out; */}
+
+/* User Profile Information */
+.user-profile-info{ width:720px; padding:0 24px 30px 60px; border-top:solid 1px #ccc;}
+.user-profile-info:first-child{ border-top:none;}
+.edit-details{ display:inline-block; padding:0 5px 5px 5px; font-size:13px; line-height:18px; font-family: 'Conv_CiscoSansExtraLight';}
+.user-profile-sumry{}
+.user-profile-sumry-left{padding-right: 10px;}
+.user-profile-sumry-right{padding-left: 10px;}
+.user-profile-info h2 {font-size: 30px; line-height:18px; color: #333333; font-family: 'Conv_CiscoSansThin';}
+.user-profile-sumry h4 { color: #434343; font-size: 20px; font-weight: 300; display:block;  margin: 10px 0;}
+.user-info-label{ font-size:13px; line-height: 20px; font-family: 'Conv_CiscoSansRegular'; margin:5px 0 0 0;}
+.user-info-value{ font-size:13px; line-height: 20px; font-family: 'Conv_CiscoSansRegular'; margin:5px 0 0 0;}
+.review-acceptedtext {float: left;width: 100%;/* margin:25px 0 10px 0;border-top: 1px solid #cccccc;*/  padding: 25px 0px 15px 15px ;}
+.review-acceptedtext i {background: url(../images/t&c-acept-icon.png)no-repeat;height: 21px;width: 25px;display: block; float: left; margin: -2px 10px 0px 0px;}
+.review-acceptedtext span {font-size: 13px;font-family: 'Conv_CiscoSansRegular';}
+.form-btn.review-text{margin:0px;}
+.accepted-before-btn {width: 40%;float: right;margin: -12px auto;}
+.accepted-before-btn .form-btn {float: left;width: 100%;margin: 10px 0 20px;}
+.accepted-before {width: 55%;float: left;line-height: 30px;}
+.review-text i.review-status {float: left; background:url(../images/footer-status-icon.png) 0px 0px no-repeat; height: 30px; width: 30px;display: block;margin-right: 10px;}
+.review-text i.review-status.error-status{ background-position:0px -23px;}
+.review-acceptedtext i.review-status.accepted-status{background-position:0px 0px;}
+.review-text span a {font-size: 14px;font-family: 'Conv_CiscoSansRegular';}
+
+.footer-pannel{ width:750px;  padding: 0 60px 30px 60px;  border-top: solid 1px #ccc;}
+.footer-pannel.footer-full-width{width:100%;  padding: 0px;border:none}
+.top-border{ border-top:solid 1px #ccc; padding-top:20px;}
+.form-btn.top-border { margin-top:10px;	}
+.green-text{  color: #7CBA59;float: right;text-align: right;width: 100%;  font-family: 'Conv_CiscoSansRegular';}
+/*Cisco.com Without User Id*/
+.blue-text{color:#0096d6 !important;}
+.forgot-id, .forgot-password{ margin: 0px 0px 0px 39px;}
+.add-user-help {background: url(../images/icon-help.png)no-repeat;width: 16px;height: 16px;float: right;margin: 1px 13px 0px 0px;position:relative;}
+.heading-signup h5{text-align:center;font-family: 'Conv_CiscoSansExtraLight';  margin: 0px 0px 20px;line-height:20px;}
+.validation-error.required-field{font-size:16px;  margin: 0px 0px 15px;font-family: 'Conv_CiscoSansRegular';  color: #999;}
+.user-label.label-top{padding:5px 0px 2px;}
+.account-panel-info.grey-text h1{color:#333;}
+.account-panel-info.grey-text i{background:url(../images/confirmation-check.png)no-repeat;width:70px;height:56px;  margin: 0px 0px 50px;}
+.login-content-section .form-group .add-user-help{position:absolute;  top: 9px;right: -43px;cursor:pointer;}
+.heading-signup p{font-family: 'Conv_CiscoSansExtraLight';}
+.heading-signup p span, .user-profile-info.note-reviewed p span{font-family: 'Conv_CiscoSansRegular';font-weight: bold;}
+.user-profile-info.note-reviewed p{margin: 30px 0px;font-family: 'Conv_CiscoSansExtraLight';}
+.note-summry{text-align:center;  margin: 30px 0px 0px;  width: 1014px;}
+.note-summry .add-user-help{  position: absolute;  left: 303px;  top: -1px;left: 252px;top: 2px;  background: url(../images/billing-info-icon.png)no-repeat;  top: -2px;left: 244px;width: 24px;height: 24px;}
+.note-summry span{font-family: 'Conv_CiscoSansExtraLight';  font-size:16px;}
+.no-cco-panel{padding: 0px;width: 285px;float: left;}
+.no-cco-account-panel{width:300px;}
+.no-cco-heading{margin:15px -15px;}
+.no-cco-heading p{font-family: 'Conv_CiscoSansExtraLight';}
+.no-cco-heading p span{font-family: 'Conv_CiscoSansRegular';}
+.footer-pannel.no-cco-footer{width: 720px;padding: 19px 60px 30px 60px;border-top: solid 1px #ccc;}
+.no-cco-footer .show-charcheck span{  font-size: 13px;font-family: 'Conv_CiscoSansRegular';}
+.no-cco-detail-info{  margin: 10px -15px 0px;}
+.footer {width: 100%;min-width: 100%;text-align: center;padding: 0;/* background-image: url(../assets/welcome-img.jpg); */position: relative;z-index: 0;color: #fff;}
+.footer .copyright { font-family: 'CiscoSansLight', Arial;font-size: 13px;background: #222222;border-top: 1px solid #666666;width: 100%;padding: 15px 0px; margin-top: 40px;color: #bbb;}
+.footer .copyright .footer-text-left{float:left;color:#bbb!important}
+.footer .copyright .footer-text-right{float:right;color:#bbb!important}
+/*tooltip css*/
+/*custom tooltip start*/
+.custom-tooltip{padding:10px; font-size:11px; position:absolute; background-color:#000; color:white; font-weight:bold;width: 200px;right: 0px;opacity: 0.8;}
+.custom-tooltip-arrow{width:9px; height:4px; background:url(../images/tipsy.gif) no-repeat 0 0; position:absolute; right:11px; top:-4px;}
+.tooltip-sec-title{font-size:12px; margin-bottom:5px; font-weight:bold;}
+.custom-tooltip p{margin:0px; padding:0 0 10px 0;width:100% !important;font-size:13px !important;color:#ffffff;font-family: 'Conv_CiscoSansExtraLight'}
+.custom-tooltip-arrow p{width:100%;}
+.custom-tooltip.initial-project-detail{border-radius:4px;background:#000;opacity:1;}
+.custom-tooltip.initial-project-detail.label-tooltip{right: 6px;width: auto;top: 5px;padding: 7px 10px;white-space: nowrap;}
+.toolCont {position: relative; width: 1px;}
+.arrow.label-tooltip-arrow{right: -5px!important;top: 11px!important;width: 9px!important; height: 10px !important;}
+
+/*custom tooltip end*/
+
+
+/** Internal Employee  Panel **/
+.internal-panel-info{ width:1008px;}
+.internal-panel-info h2{font-family: 'Conv_CiscoSansThin';font-size:36px;color:#333333;padding: 15px 0 0px;line-height: 48px;  margin-bottom: 7px;}
+.red-txt {float: right;text-align: right;width: 100%;color: #EA2725;margin: 0;  font-family: 'Conv_CiscoSansRegular';}
+/** Invoice Summary Panel ***/
+.invoice-smry-panel {padding:0px;}
+.invoice-smry-box {}
+.invoice-smry-box h5.invoice-ttl { display:block; color: #989898; font-family: 'Conv_CiscoSansRegular'; font-size: 16px; line-height:18px; text-align:center;}
+.invoice-smry-box .invoice-amt{ display:block; color: #0895d3; font-size: 30px; line-height:32px; text-align:center;}
+.invoice-smry-box .invoice-amt .dollar-sign{ color: #0895d3; font-size: 14px; font-family: 'Conv_CiscoSansRegular'; vertical-align: top; display: inline-block; margin:20px 2px 0 0;}
+.note{ display:block; padding:20px 0; font-family: 'Conv_CiscoSansRegular'; font-size: 13px;}
+
+/** Invoice Complete information **/
+.invoice-info-outr { border-top: solid 1px #ccc;  padding: 13px 0px 30px; margin:0;}
+/*.invoice-info-outr:first-child { border:none;}
+*/.invoice-info-panel{ display:block; }
+.invoice-info-panel h3{ display:block; font-family: 'Conv_CiscoSansRegular'; color: #666666; font-size: 24px;}
+.invoice-info{ display:block; font-family: 'Conv_CiscoSansRegular'; font-size: 13px; line-height:18px; color:#333;}
+.invoice-info .time{font-family: 'Conv_CiscoSansRegular';}
+.invoice-info .time.due{color: #333;}
+.invoice-info .time.overdue{color: #e82b27;}
+.invoice-nav{float: left; margin: 15px 0 30px; padding: 0;}
+.invoice-nav li { display:inline-block; padding:0 5px; border-left:solid 1px #ccc; line-height:1px;}
+.invoice-nav li:first-child { border:none; padding-left:0px;} 
+.invoice-nav li a{ display:block; line-height:12px;}
+.invoice-section{width:820px;}
+.tab-panel-content{width:1052px;}
+.tab-panel-container{width:1070px;}
+.tab-panel-container .nav-tabs{width:1024px;}
+.tab-panel-container.acc-management-panel{width:1025px;}
+
+.invoice-top { margin: 0 0 20px; float: left; width: 100%;}
+.invoice-top h3, .form-btn.pay-invoice-btn{margin:0px;}
+.invoice-tab-section{  border-bottom: 1px solid #bbb; margin:0;}
+.form-btn.pay-invoice-btn{}
+.filter-section{clear:both;margin-top: 10px;}
+.filter-select .sbHolder { border: medium none;}
+.filter-select {  width: 100px;}
+.filter-section .form-btn { margin: 5px 0 0 10px;float: left; margin-left: 10px;width: auto;}
+.bill-search .search-input { background: url("../images/user-search-icon.png") no-repeat scroll right -111px; border: medium none; height: 24px; outline: medium none; width: 28px; position: absolute; right: 3px; top: 0px;}
+.bill-search .search-input:hover { background-position: 4px -184px;}
+.search-cross .cross {position: absolute;right: 10px; top: 2px;outline: none !important;display: block; background: url("../images/search-icon1.png") no-repeat scroll right 0px; background-position: 0 -149px;height: 20px;border: none;width: 20px;}
+.invoice-search .bill-search input { -webkit-box-shadow: none;box-shadow: none;}
+.invoice-search .bill-search input:hover, .invoice-search .bill-search input:focus { border:none !important;}
+.bill-search input { border: none; float: left;padding: 0;width: 165px;}
+.bill-search { border: 1px solid #b4b4b4;box-shadow: none; color: #888888;float: right; font-family: "Conv_CiscoSansThin"; margin: 6px 0 0; padding: 2px 6px; width: 240px; position: relative;}
+.invoice-search .bill-search input {-webkit-box-shadow: none;box-shadow: none;/* border:none!important; *//* border: solid 1px red !important; */width: 100%;padding-right: 30px;box-sizing: border-box;}
+.filter-bar span {float: left; margin: 13px 0 0;font-family: 'Conv_CiscoSansRegular';}
+.filter-bar.filter-right {float: right;}
+/** Balance Complete information **/
+.balance-info-panel {  margin: 10px 0 0 0; color: #333333;  font-size: 16px; font-family: 'Conv_CiscoSansRegular'; line-height:18px;}
+.balance-amt{clear:both;text-align:right; font-size: 36px;  margin: 25px 0px 10px}
+.balance-amt.paid{color: #7CBA59;}
+.balance-amt .dollar-sign{ color: #333; font-size: 18px; font-family: 'Conv_CiscoSansRegular'; vertical-align: top; display: inline-block; margin: 12px 2px 0 0;}
+.pay-full-box { float:left; margin:30px 0 0 60px;}
+.total-amount { float:right;  margin: 35px 0px 0px;}
+.total-amount .dollar-icon { color: #333; font-size: 18px; font-family: 'Conv_CiscoSansRegular'; vertical-align: top; display: inline-block; margin: 12px 2px 0 0;}
+.total-payment{ border: 2px solid #ccc; line-height: 30px; margin: -8px 0 0 7px; padding: 0 5px; text-align: right;  width: 120px;}
+.confirm-payment-text h4 span{font-family: 'Conv_CiscoSansRegular';font-size:18px;}
+.confirm-payment-text h4{ font-family: 'Conv_CiscoSansExtraLight';}
+.no-border {border: medium none !important;}
+
+.billing-address-box{}
+.billing-box{}
+.billing-box .billing-adrs{ display:block; font-size: 13px;   font-family: 'Conv_CiscoSansRegular'; line-height:18px; color: #333333;}
+.billing-info-sumry{padding-left: 0px;}
+.billing-info-sumry label {font-size: 13px; display:block;  font-family: 'Conv_CiscoSansRegular'; font-weight:normal; line-height:18px; color: #333333;}
+.billing-info-sumry span{color: #333333; font-size: 24px; font-weight: 200; margin: 0; font-family: 'Conv_CiscoSansThin'; display:block; vertical-align: middle; margin: 0;}
+.review-text i {background: url(../images/error-icon.png)no-repeat;height: 31px;width: 31px;display: block;float: left;}
+
+/** User Lists and Edit User formmatting **/
+.add-user-label{   margin: 20px 0px 0px;}
+.add-user-label span{  margin-left: 10px; font-family: 'Conv_CiscoSansRegular'!important;color:#333!important;  line-height: 22px;font-size:13px !important;}
+.bold-name h3{  font-size: 20px;font-family: 'Conv_CiscoSansRegular';  margin: 2px 0 4px 0;}
+.bold-name h3 span, .add-user-assignrole span {font-size: 20px;color: #cf2030;font-family: 'Conv_CiscoSansRegular';}
+.add-user-assignrole h4{   margin: 8px 0 0 0;;}
+.option-selection{font-size: 13px;font-family: 'Conv_CiscoSansExtraLight';  margin: 10px 0px 0px 0px;}
+.users-list-wrapper { }
+.user-controls{ margin:0; padding:15px 0;}
+.remove-btn-box{ text-align:left; padding:0;}
+.remove-btn-box .remove-records { float:left; margin:0;}
+.user-search-area { padding:0;}
+.user-role-box{/*float:right; width:190px;*/}
+.user-role-box.search-area{max-width:200px;float:right;}
+.user-detail-panel{ margin:0;  border-top:solid 1px #CCC;  padding: 15px 0px 25px;}
+.user-detail-panel .check-option{margin:20px 0 0 0;}
+.user-detail-panel .user-info{ }
+.user-sub-details { display:block;  font-family: 'Conv_CiscoSansRegular';}
+.user-sub-details h4 { font-size: 20px; font-family: 'Conv_CiscoSansRegular';}
+.user-sub-details { display:block; font-size: 13px; line-height:24px;}
+.user-sub-details .user-id, 	.user-sub-details .user-email { font-family: 'Conv_CiscoSansRegular';}
+
+.user-role-area{ display:none;}
+.user-role-box { display:block; margin-top:-5px; padding-right:0px;}
+.user-role-box h4 { font-size: 20px; font-family: 'Conv_CiscoSansRegular'; display: block; margin: 15px 0 0 0;}
+.info-icon { float: right; width: 16px; height: 16px; background: url(../images/icon-help.png)no-repeat;  margin: 1px 13px 0px 0px; cursor:pointer;}
+.user-role-box .user-sub-details { display:block; font-size: 13px; line-height:24px; font-family: 'Conv_CiscoSansRegular';}
+.edit-user-role{}
+.edit-user-role .label_check{ display:block;  margin: 0 0px 10px 0;}
+.user-panel-view h4{font-size: 16px;font-family: 'Conv_CiscoSansRegular';margin: 36px 0 4px;}
+.user-panel-view .edit-role {  margin-left: 20px;}
+
+.user-edit-view { display:block;}
+.user-edit-view h4{font-size: 16px;    font-family: 'Conv_CiscoSansRegular';/* font-family: 'Conv_CiscoSansExtraLight';*/}
+.user-role-area { margin:0;}
+.edit-user-role{ padding-left:0;}
+.edit-user-role h5{font-size: 16px; display: block; position: relative;font-family: 'Conv_CiscoSansExtraLight'}
+.edit-user-role .col-lg-12{ font-family: 'Conv_CiscoSansRegular' !important; padding: 0px;
+}
+.add-btn{ margin-top:30px;}
+
+.acc-user-search{ float:right; margin:-2px -65px 0 0; font-family: "Conv_CiscoSansThin"; padding: 2px 6px; position: relative; display: inline-block; vertical-align: middle;}
+.acc-user-search input[type=search] { border: 1px solid #b4b4b4; box-shadow: none; color: #888888;float: right; font-family: "Conv_CiscoSansThin"; width: 240px;padding: 9px 0px; height: 30px; margin: 0; background-position: 211px 8px; width: 0%; -webkit-transition:all .6s ease;-moz-transition:all .6s ease;-o-transition:all .6s ease;-ms-transition:all .6s ease;transition:all .6s ease; opacity:0;}
+.acc-user-search.open input[type=search]{ width: 245px; opacity: 1; padding: 2px 25px 0px 5px;}
+.acc-user-search .acc-search-icon{ background: url("../images/user-search-icon.png") no-repeat scroll right -76px; border: medium none; float: right; height: 23px; outline: medium none; width: 28px; position: absolute; right: 10px; top:5px; z-index:10;}
+.acc-user-search.open .acc-search-icon.open{ background-position: 4px -113px;}
+
+/*** Add User Panel ***/
+.add-user-panel{   position: relative; background: #f0f0f0; padding: 30px 0; margin-top:30px; display:none;}
+.add-user-panel .user-role-area { display:block !important;}
+.add-user-panel .user-detail-panel { border-top:none;}
+.add-user-panel-inner { position:relative;  width: 1070px;}
+.email-input-lg{  height: 30px; line-height: 30px; padding: 0px 8px; width:350px; max-width:100%;}
+.email-input-lg.error{ border: 1px solid #ff0000 !important; background: #fdeded;}
+.top-edge-arow{ background:url(../images/top-edge.png) left top no-repeat; position:absolute; right: 52px; top: -55px; width: 60px; height:25px; }
+.cloud-form{ width:420px;}
+.cloud-user-select{ width:925px;}
+.cloud-user-select-inner{ margin:10px 0;}
+.cloud-user-select-inner .col-lg-12{padding-left:0px;}
+.cloud-user-select .radio { width:auto; display:inline-block; margin-right:25px;}
+#add-user-popup {width: 700px;height: 80px;margin: 0px 0; background: #333;padding: 0px;border-radius: 3px;}
+#add-user-popup p {text-align: left;color: #fff;margin: 26px 20px;font-size: 18px;font-family: 'Conv_CiscoSansExtraLight';width: 55%;float: left;}
+#add-user-popup .form-btn{width: 35%;margin: 24px 20px 20px 0;float: right;}
+#add-user-popup .form-btn .right-btn{border: 1px solid #fff;background: none;border-radius: 0;color: #fff;font-size: 13px; width: auto;padding: 0px 35px;line-height: 30px; /* height: 35px; */}
+#add-user-popup .form-btn .middle-btn, #card-popup .form-btn .middle-btn {border: 1px solid #fff;background: #333;border-radius: 0; color: #fff; font-size: 13px;width: auto;padding: 0px 35px;line-height: 30px;}
+.fancy-remove-outerbg .fancybox-skin {padding: 0 !important;}
+.fancy-remove-outerbg .fancybox-skin .fancybox-close {display: none;}
+#remove-popup, #delete-popup{width:310px !important;margin: 0px 0;}
+.delete-user h3 {color: #444444;margin: 0px 0 26px;text-align: center;font-size: 36px;font-family: 'Conv_CiscoSansThin';}
+#remove-popup p, #delete-popup p{text-align: center !important;color: #444; margin: 26px 20px;font-size: 16px;font-family: 'Conv_CiscoSansExtraLight';width: 100%;margin: 0 0 35px!important;  box-sizing: border-box;line-height: 24px}
+#remove-popup .form-btn, #delete-popup .form-btn {width: auto!important;margin: 0 12% !important;float: inherit !important;text-align: center;}
+#remove-popup .form-btn .grey-btn, #delete-popup .form-btn .grey-btn{float: left;margin: 0 5px;}
+.billing-info-sumry .po-details{padding-left:32px;}
+.billing-info-sumry  .po-lists{padding-left:10px;font-size:13px; font-family: 'Conv_CiscoSansRegular'; }
+.billing-info-sumry .label_radio{  padding: 1px 0 4px 23px;}
+/** Credit Card Information ***/
+.card-list-area-outer{ width:930px;}
+.user-card-list-outer{ width:1000px;}
+.card-list-area { margin:0px; }
+.card-list-box { float: left; height: 190px; width:32%;  margin: 5px 0.5%; padding: 40px; border: 1px solid #b4b4b4; border-radius: 10px; cursor: pointer;   text-align: center;  position: relative;}
+.card-list-box:hover{  background: #0C95D3; color: #fff;  border: 1px solid #0c95d3;}
+.card-list-box.active {  background: #0C95D3; color: #fff;  border: 1px solid #0c95d3;}
+.card-list-box.active .valid-thru{ color:#fff;}
+.card-list-box.active .valid-thru span{ color:#fff;}
+.card-list-box.active .card-user{ color:#fff;}
+.card-list-box.add-new-card {  padding: 40px 0; border: 3px dashed #0c95d3; text-align:center;}
+.card-list-box.add-new-card:hover { border: 3px solid #0c95d3;}
+.add-new-card.active {   background: #0C95D3;}
+.add-new-card.active  i.add-card-icon { background-position:0px -120px;}
+.add-new-card.active  h3 { color:#fff;}
+.cardstatus {width: 34px;height: 32px;background: url(../images/card_tick.png) no-repeat 0 -52px;top:-1px;right: -2px;position: absolute; visibility:hidden;}
+.card-list-box.active .cardstatus { visibility:visible;}
+.user-card-list-outer  .card-list-box.active .cardstatus { width: 100%; text-align: left; padding: 15px 35px 5px 35px; background: none; color: #fff;}
+
+.card-list-box.sub-admin .card-user {  font-size: 20px; font-family: 'Conv_CiscoSansRegular'; margin:15px 0 0 0;}
+.card-list-box i.add-card-icon{ background: url(../images/add-icon.png) 0px 0px no-repeat; height: 60px; width: 60px; display: block; margin: 0 auto;}
+.card-list-box h3{ color:#0C95D3;}
+
+.card-list-box h5 { display:block; font-size:20px; line-height:22px; margin:10px 0; text-align:left;}
+.card-list-box.sub-admin h5, .card-list-box.sub-admin .card-user { text-align:center;}
+.card-list-box.sub-admin h5 {font-family: 'Conv_CiscoSansRegular'; font-size:16px;}
+.valid-thru { display:block; font-size: 13px; font-family: 'Conv_CiscoSansThin'; text-align:left;}
+.card-user {display:block; font-size: 16px; font-family: 'Conv_CiscoSansThin'; text-align:left; margin:10px 0 0 0;}
+.card-controls{ float:left; width:100%;}
+.card-left-panel{ float:left; }
+.card-left-panel {}
+.card-left-panel  i { display:inline-block; width:20px; height:20px; background:url(../images/action-icons.png) no-repeat; margin:5px 5px 0 0; visibility:hidden;}
+.card-left-panel  i.edit-icon{background-position:-28px 0; }
+.card-left-panel  i.delete-icon{background-position:2px 0; }
+
+.card-left-panel  .edit-icon { display:inline-block; width:20px; height:20px; background:url(../images/action-icons.png) -28px 0 no-repeat; margin:5px 5px 0 0; visibility:hidden;}
+
+.card-list-box:hover .edit-icon  { visibility:visible; background-position:-28px -20px;} 
+.rgt-panel{ float:right;}
+.rgt-panel .ccard{ display:block; width:45px; height:30px; background:url(../images/credit-cards.png) 0px 0px no-repeat;}
+.rgt-panel .ccard.visa{ background-position:0px 0px;}
+.rgt-panel .ccard.master{ background-position:0px -37px;}
+.rgt-panel .ccard.american{ background-position:0px -80px;}
+
+.card-status { border:solid 1px #f1f1f1; background:#fff; color:#666; padding: 6px 10px; margin:10px 0;   font-family: 'Conv_CiscoSansRegular';}
+.card-status.error  { background: #fee2e2; border: 1px solid #ff0000; color:#ff0000;}
+.card-status.warning  { background: #fee2e2; border: 1px solid #ff0000; }
+.card-status.success  { background: #fee2e2; border: 1px solid #ff0000; }
+.delete-card { float:left; color: #0096d6; outline: none; padding: 7px 58px;  font-family: 'Conv_CiscoSansExtraLight'; font-size:14px;}
+
+.card-list-box:hover  i.add-card-icon { background-position:0px -120px;}
+.card-list-box:hover  h3{ color:#fff;}
+.card-list-box:hover .valid-thru{ color:#fff;}
+.card-list-box:hover .valid-thru span{ color:#fff;}
+.card-list-box:hover .card-user{ color:#fff;}
+.card-list-box:hover .card-left-panel i{ visibility:visible;}
+.card-list-box:hover .card-left-panel i.edit-icon{background-position:-28px -20px; }
+.card-list-box:hover .card-left-panel i.delete-icon{background-position:2px -20px; }
+.card-list-box.sub-admin:hover { background:#fff; border:1px solid #b4b4b4;}
+.card-list-box.sub-admin:hover h5{   color: #333333;}
+.card-list-box.sub-admin:hover .card-user{   color: #333333;}
+
+.add-card-outr-panel{   position: absolute; z-index: 9999; width:100%; background: #f0f0f0; padding: 30px 0; margin-top:30px; display:none;}
+.add-card-panel { width:700px; position:relative;}
+.add-card-panel .top-edge{ background:url(../images/top-edge.png) left top no-repeat; position:absolute; left: 22px; top: -55px; width: 60px; height:25px; }
+
+.card-thumb-list{ display:block; margin:5px 0 2px 0px;}
+.card-thumb-list i.card { display:inline-block; margin:0 5px 0 0; background:url(../images/card-icons.png) left top no-repeat; width: 41px; height: 30px;}
+.card-thumb-list i.card.visa{ background-position:0px 0px;}
+.card-thumb-list i.card.master{ background-position: 0px -38px;}
+.card-thumb-list i.card.american{ background-position: 0px -77px;}
+.card-select-box-outr { margin:0;}
+.card-select-box { width:48%; padding:0;}
+.cvv-tip { float:right; line-height:18px; font-size: 10px; font-family: 'Conv_CiscoSansExtraLight'; margin:-2px 0 0 0;}
+.close-icon { display: block; width: 30px; height: 30px; background: url(../images/close-icon.png) no-repeat; cursor: pointer; position: absolute; right: -115px; top: 0px; }
+.close-icon:hover { background-position: 0 -41px;}
+
+.field-error {float: left; color: #ff0000; font-family: 'Conv_CiscoSansRegular';}
+.user-field-error {float: left; color: #ff0000; font-family: 'Conv_CiscoSansRegular'; margin:3px 0px; display:none;}
+.error-icon{  background: url(../images/field-error-icon.png) no-repeat; height: 20px; width: 20px; position: absolute; right: -26px; top: 11px;}
+.form-input.error{ border: 1px solid #ff0000 !important; background: #fdeded;}
+.card-update-alert { padding: 10px; margin-bottom:25px; background:#2A2A2A; color:#fff; border-radius:5px;}
+
+.purchase-order-outer{ width:720px;}
+.purchase-order-outer .purchase-row { padding:15px 0px; border-top:1px solid #ccc;}
+.view-list{ float:right;}
+
+.purchase-order-outer .purchase-row.list-panel-header { padding:5px 0px; border-top:none;}
+.list-panel-header h2 { margin: 10px 0; color: #333; font-size:20px; font-family: 'Conv_CiscoSansRegular';}
+.list-panel-header h4 { margin: 10px 0; color: #999; font-size:16px; font-family: 'Conv_CiscoSansRegular';}
+.list-panel-search{float: right; width: 240px; margin:24px 0px 0px ; padding:0;  border: 1px solid #b4b4b4; box-shadow: none; color: #999;  font-family: "Conv_CiscoSansThin"; position:relative;}
+.list-panel-search  .navbar-form { margin:0; padding:0; width:100%; background:pink;}
+.list-panel-search  .navbar-form .form-group { width:100%; }
+.list-panel-search  .navbar-form .form-group .form-control{  width:100%; box-shadow:none; outline:none; border:none; height:30px;  box-sizing: border-box;padding-right: 33px !important;}
+.list-panel-search .search-icon{ background: url("../images/search-icon.png") no-repeat scroll right -114px; border: medium none; position:absolute; right: 4px; top:3px;   height: 24px;  outline: medium none;  width: 28px; text-indent:-999999px; min-width:30px;}
+.list-panel-search .search-icon.close { background-position:0px -149px;}
+.list-panel-search .search-icon:hover {background-position:right -187px;}
+.list-panel-search .search-icon:focus { box-shadow:none;}
+
+.red-info { display:inline-block; font-size: 16px; font-family: 'Conv_CiscoSansRegular'; color: #ea2725; margin:0 0 0 5px;}
+.green-info { display:inline-block; font-size: 16px; font-family: 'Conv_CiscoSansRegular'; color: #7CBA59; margin:0 0 0 5px;}
+
+.pay-process{ display:block; margin:5px 0 0 0; text-align:right; color: #7CBA59;  font-family: 'Conv_CiscoSansRegular';}
+.pay-remaining{  display:block; margin:5px 0 0 0; text-align:right; color: #EA2725;  font-family: 'Conv_CiscoSansRegular';}
+.balance-amt .symbol{ display:inline-block; margin:5px; font-size: 36px; font-style:normal;}
+
+.user-information h4{font-size:20px;}
+
+
+
+/*signup-multiparty*/
+.multi-signup ul li.active-signup a {border-bottom: 4px solid #0096d6;}
+.content-signup p{text-align: left;font-size: 16px;line-height: 24px; margin: 40px 0 20px;font-family: 'Conv_CiscoSansExtraLight';}
+.main-startupcontent {width: 100%;clear: both;}
+.main-startupcontent h4 {font-size: 20px;font-family: 'Conv_CiscoSansExtraLight';margin: 0px 0px 20px 0;width: 100%;float: left;}
+.label-signup{width: 100%;clear: both;}
+.label-signup .radio .label1 {margin: 0px 0px 20px 0px; padding: 0 15px 0px 33px;box-shadow: none;border: none !important;outline: none;}
+.label-signup .radio label { display: inline-block; vertical-align: middle; padding: 0px 15px 30px 33px; font-family: 'Conv_CiscoSansExtraLight';line-height: 18px;font-size: 13px;}
+
+/*PayInvoivces*/
+.applyCredit-popup {position: absolute;top: -72px;right: 13px;width: 300px;height: auto;color: #fff;box-sizing: border-box;padding: 10px;background-color: rgba(0,0,0,0.9);}
+.applyCredit-popup a {color: #fff;text-decoration: underline;}
+.applyCredit-popup i { background: url(../images/credit-arrow.png) bottom center no-repeat; display: inline-block; width: 27px; height: 13px; position: absolute; bottom: -13px;left: 50%;margin-left: -12px;}
+.pay-info {border: 1px solid #aaa;border-radius: 3px;padding: 5px;width: 315px;position: absolute; right: 105px;bottom: 0px; background-color: #fff;}
+.pay-info span { display: block;background-color: #eee;border: 1px solid #aaa;text-align: center; padding: 3px;border-radius: 3px;}
+.pay-info .user-infoMsg {margin-bottom: 5px;}
+.border-bottom{border-bottom:1px solid #ccc}
+.margin-top{  margin: 40px 0px 0px 0px;}
+
+#card-update{ display:none;}
+.progressBar{ width:340px; height:auto; position:absolute; left:50%; top:50%; margin:-34px 0 0 -170px; text-align:center; padding:16px 0; background-color: rgba(0, 0, 0, 0.9); display:none;}
+.progressBar img{ border-radius:6px;}
+
+.custom-tooltip { position: absolute;  top: 35px; right: 15px; z-index: 999; background-color: #000; color: white; opacity: 0.8; font-size: 12px; font-weight: normal;font-family: 'Conv_CiscoSansRegular'; line-height: 16px;  width: 200px; padding: 10px; display:none;}
+.custom-tooltip  .arrow{width:10px; height:5px; background:url(../images/tipsy.gif) no-repeat 0 0; position:absolute; right:15px; top:-5px;}
+
+.pay-invoice-footer{padding:0px;}
+.initial-project-detail{ right: -120px; top: 32px; font-family: 'Conv_CiscoSansRegular';}
+.initial-project-detail.custom-tooltip .arrow{top: -5px; right:92px;}
+.initial-project-detail p{font-family: 'Conv_CiscoSansRegular';  margin-bottom: -6px;}
+.paddingBottom{padding-bottom:0px;}
+.admin-info h2{margin-top:0px;}
+.sort-by{ float:left;}
+.invoice-date{ padding:0;}
+.filter-outer-area { padding-right:0px;}
+.filter-select-right  { float:right;  width:200px; margin:0 0 0 10px;}
+.fliter-panel-top{ margin:0;}
+.filter-option-panel { margin:15px 0;}
+.filter-option-panel-inner{ margin:0;}
+.filter-option-panel-inner .control-label{ padding-left:0;}
+.filter-option-panel .add-user-label {   margin: 10px 0px 0px; }
+.filter-option-panel .filter-option{ padding:0px;} 
+.filter-option-panel .filter-option .label_check{ margin-bottom:0;}
+.time-slot { display:block;}
+.time-slot-panel { margin: 10px 0;}
+.close-date {background: url(../images/cross.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; float: left; height: 10px; margin: 4px 10px 0 5px; outline: medium none; padding: 0; width: 10px;/* border: solid 1px red; */}
+.time-slot-in span{color:#0f95d3; font-size:13px; font-family: 'Conv_CiscoSansRegular';}
+
+/*register-user-popup*/
+#register-user-popup { width: 700px;height: 100px;margin: 0px 0;background: #000;padding: 0px; border-radius: 3px;  opacity: 0.9;}
+#register-user-popup .register-popup-content{float:left;width:70%;  margin: 28px 0px 0px;}
+#register-user-popup .register-popup-content p { text-align: left;color: #fff;font-size: 16px;font-family: 'Conv_CiscoSansExtraLight';float: left;line-height: 24px;  margin-bottom: 0px;}
+#register-user-popup .form-btn{width: 15%;margin:35px 20px 20px 0;float: right;}
+#register-user-popup .form-btn .right-btn{border: 1px solid #fff;background: none;border-radius: 0;color: #fff;font-size: 13px; width: auto;line-height: 30px; /* height: 35px; */}
+#register-user-popup .form-btn .middle-btn, #card-popup .form-btn .middle-btn {border: 1px solid #fff;background: #333;border-radius: 0; color: #fff; font-size: 13px;width: auto;line-height: 30px;}
+#register-user-popup i{background:url(../images/register-popup-icon.png)no-repeat; width: 28px;height: 24px;;float:left;margin: 36px 20px 0px;}

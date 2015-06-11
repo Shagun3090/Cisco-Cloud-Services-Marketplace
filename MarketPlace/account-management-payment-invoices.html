@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>CISCO</title>
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="css/jquery.fancybox.css" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<!-- jquery script -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<!-- bootstrap script -->
+<script src="js/bootstrap.min.js"></script>
+<!-- custom script files-->
+<script src="js/html5.js"></script>
+<script src="js/jquery.selectbox-0.1.3.js"></script>
+<script src="js/custom-radio-check.js"></script>
+<script src="js/jquery.tipsy.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/fancybox/jquery.fancybox.js"></script>
+<script src="js/script.js"></script>
+</head>
+<!--Email validation page -->
+<body  class="has-js">
+<header class="container-fluid">
+  <div class="container-fluid">
+    <div class="container header-container">
+      <div class="row">
+        <div class="col-lg-8 header-top-left"> <a class="logo" href="javascript:void(0);"> <img src="images/cisco-logo.png" alt="Logo"></a> <i>Cloud Services</i> </div>
+        <div class="col-md-4 header-top-right">
+          <ul>
+            <li><a href="javascript:void(0);">Support <i></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+<div class="clearfix"></div>
+<div class="container-fluid user-dashboard">
+  <div class="container-fluid user-dashboard-content"> Management Portal
+    <!-- /user-dashboard-content -->
+  </div>
+  <div class="clearfix"></div>
+  <div class="container-fluid user-dashboard-nav-outr">
+    <div class="container user-dashboard-nav-inner">
+      <ul class="user-dashboard-nav">
+        <li><a href="javascript:void(0);">Purchased Services</a></li>
+        <li><a href="javascript:void(0);">My Profile</a></li>
+        <li class="active"><a href="javascript:void(0);">Billing</a></li>
+        <li><a href="javascript:void(0);">Users</a></li>
+        <!-- /user-dashboard-nav -->
+      </ul>
+      <!-- /user-dashboard-nav-inner -->
+    </div>
+    <!-- /user-dashboard-nav-outr -->
+  </div>
+  <!-- /user-dashboard -->
+</div>
+<div class="clearfix"></div>
+<div class="cotainer-fluid">
+  <div class="container tab-panel-container">
+    <div role="tabpanel">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation"><a href="#paymentSettings" aria-controls="paymentSettings" role="tab" data-toggle="tab">Payment Settings</a></li>
+        <li role="presentation" class="active"><a href="#invoicesPayments" aria-controls="invoicesPayments" role="tab" data-toggle="tab">Invoices &amp; Payments</a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="invoicesPayments">
+          <div class="container-fluid invoice-smry-panel">
+            <div class="row invoice-tab-section">
+              <div class="col-lg-6">
+                <div class="invoice-top">
+                  <h3>Invoices</h3>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-btn pay-invoice-btn">
+                  <button class="btn blue-btn right-btn" type="submit">Pay Invoices</button>
+                </div>
+              </div>
+            </div>
+            <div class="row  fliter-panel-top" >
+              <div class="col-lg-12">
+                <div class="filter-section">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <div class="filter-select">
+                        <div class="input-gp selectdrop">
+                          <select class="moreCategoriesSelect" style="display: none;">
+                            <option value="Question" selected="">Filter By</option>
+                            <option value="Question">Role 2</option>
+                            <option value="Question">Role 3</option>
+                            <option value="Question">Role 4</option>
+                            <option value="Question">Role 5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="form-btn">
+                        <button class="btn grey-btn middle-btn">Reset</button>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 invoice-search">
+                      <div class="bill-search search-cross">
+                        <input type="text" class="form-input" id="search" placeholder="Transaction Number">
+                        <button type="button" class="search-input"></button>
+                        <button type="button" class="cross" style="display:none;"></button>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 filter-outer-area">
+                      <div class="filter-bar filter-right"> <span class="sort-by">Sort By</span>
+                        <div  class="filter-select-right">
+                          <div class="input-gp selectdrop">
+                            <select class="moreCategoriesSelect" >
+                              <option value="Question" selected="">Transaction date: most recent</option>
+                              <option value="Question">Transaction date: oldest</option>
+                              <option value="Question">Transaction amount: high to low</option>
+                              <option value="Question">Transaction amount: low to high</option>
+                              <option value="Question">Invoice first</option>
+                              <option value="Question">Credit note first</option>
+                              <option value="Question">Unpaid invoice first</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /filter-outer-area -->
+                    </div>
+                  </div>
+                  <div class="filter filter-panel" style="display:none;">
+                    <div class="filter-date">
+                      <h6>Date</h6>
+                      <div class="filter-date-in"> <span>From</span>
+                        <div class="bill-search">
+                          <input type="text" class="form-input" id="search" value="20/11/2014">
+                          <button type="button" class="calender"></button>
+                        </div>
+                      </div>
+                      <div class="filter-date-in"> <span>To</span>
+                        <div class="bill-search">
+                          <input type="text" class="form-input" id="search" value="20/02/2015">
+                          <button type="button" class="calender"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-option">
+                      <h6>Payment Invoice</h6>
+                      <div class="form-checkbox">
+                        <label class="label_check c_off">
+                        <!--Remember password Checkbox-->
+                        <input type="checkbox" value="remember-me" class="checkInfoBox">
+                        </label>
+                        Invoice (13) </div>
+                      <div class="form-checkbox">
+                        <label class="label_check c_off">
+                        <!--Remember password Checkbox-->
+                        <input type="checkbox" value="remember-me" class="checkInfoBox">
+                        </label>
+                        Credit Note (7) </div>
+                    </div>
+                    <div class="filter-option">
+                      <h6>Invoice Status</h6>
+                      <div class="form-checkbox">
+                        <label class="label_check c_off">
+                        <!--Remember password Checkbox-->
+                        <input type="checkbox" value="remember-me" class="checkInfoBox">
+                        </label>
+                        Paid (11) </div>
+                      <div class="form-checkbox">
+                        <label class="label_check c_off">
+                        <!--Remember password Checkbox-->
+                        <input type="checkbox" value="remember-me" class="checkInfoBox">
+                        </label>
+                        Unpaid Invoices (2) </div>
+                    </div>
+                    <div class="filter-option">
+                      <h6>Credit Note Status</h6>
+                      <div class="form-checkbox">
+                        <label class="label_check c_off">
+                        <!--Remember password Checkbox-->
+                        <input type="checkbox" value="remember-me" class="checkInfoBox">
+                        </label>
+                        Applied (4) </div>
+                      <div class="form-checkbox">
+                        <label class="label_check c_off">
+                        <!--Remember password Checkbox-->
+                        <input type="checkbox" value="remember-me" class="checkInfoBox">
+                        </label>
+                        Open (3) </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /fliter-panel-top -->
+            </div>
+            <div class="row filter-option-panel" style="display:none;">
+              <div class="col-lg-5 user-edit-view">
+                <h4>Date</h4>
+                <div class="row filter-option-panel-inner">
+                  <form class="form-horizontal" role="form">
+                    <div class="col-lg-6 invoice-start-date">
+                      <div class="form-group">
+                        <label for="inputType" class="col-md-4 control-label">From</label>
+                        <div class="col-md-8 invoice-date">
+                          <input type="text" class="form-control calendar" id="inputType" placeholder="--/--/----" value="20/11/2014">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 invoice-end-date">
+                      <div class="form-group">
+                        <label for="inputType" class="col-md-4 control-label">To</label>
+                        <div class="col-md-8 invoice-date">
+                          <input type="text" class="form-control calendar" id="inputType" placeholder="--/--/----" value="20/02/2015">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="row">
+                  <div class="col-lg-4 user-edit-view">
+                    <h4>Payment Invoice</h4>
+                    <div class="row add-user-label">
+                      <div class="col-lg-12 filter-option">
+                        <label class="label_check">
+                        <input class="checkInfoBox" value="remember-me" type="checkbox">
+                        </label>
+                        <span>Invoice (13)</span> </div>
+                    </div>
+                    <div class="row add-user-label">
+                      <div class="col-lg-12 filter-option">
+                        <label class="label_check">
+                        <input class="checkInfoBox" value="remember-me" type="checkbox">
+                        </label>
+                        <span>Credit Note (7)</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 user-edit-view">
+                    <h4>Invoice Status</h4>
+                    <div class="row add-user-label">
+                      <div class="col-lg-12 filter-option">
+                        <label class="label_check">
+                        <input class="checkInfoBox" value="remember-me" type="checkbox">
+                        </label>
+                        <span>Paid (11)</span> </div>
+                    </div>
+                    <div class="row add-user-label">
+                      <div class="col-lg-12 filter-option">
+                        <label class="label_check">
+                        <input class="checkInfoBox" value="remember-me" type="checkbox">
+                        </label>
+                        <span>Unpaid Invoices (2)</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 user-edit-view">
+                    <h4>Credit Note Status</h4>
+                    <div class="row add-user-label">
+                      <div class="col-lg-12 filter-option">
+                        <label class="label_check">
+                        <input class="checkInfoBox" value="remember-me" type="checkbox">
+                        </label>
+                        <span>Applied (4)</span> </div>
+                    </div>
+                    <div class="row add-user-label">
+                      <div class="col-lg-12 filter-option">
+                        <label class="label_check">
+                        <input class="checkInfoBox" value="remember-me" type="checkbox">
+                        </label>
+                        <span>Open (3)</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /filter-option-panel -->
+            </div>
+            <div class="row time-slot-panel">
+              <div class="col-lg-12">
+                <div class="time-slot">
+                  <div class="time-slot-in">
+                    <button class="close-date"></button>
+                    <span>From 20/11/2015 To 20/02/2015</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="row invoice-info-outr">
+              <div class="col-lg-8 invoice-info-panel">
+                <h3>Invoice Feb 24, 2015 </h3>
+                <div class="invoice-info">Transaction Number 8259205 : $120.35</div>
+                <div class="invoice-info">Due Mar 17, 2015 <span class="time due"> (Due in 25 Days)</span></div>
+                <ul class="invoice-nav">
+                  <li><a href="javascript:void(0);">View</a></li>
+                  <li><a href="javascript:void(0);">Download PDF</a></li>
+                  <!-- /invoice-nav -->
+                </ul>
+                <!-- /invoice-info-panel -->
+              </div>
+              <div class="col-lg-4 balance-info-panel">
+                <h4>Balance<span class="red-info">Unpaid Invoices</span></h4>
+                <div class="balance-amt"> <i class="symbol">+</i><sup class="dollar-sign">$</sup>120.35 </div>
+                <!-- /balance-info-panel -->
+              </div>
+              <!-- / invoice-info-outr -->
+            </div>
+            <div class="row invoice-info-outr">
+              <div class="col-lg-8 invoice-info-panel">
+                <h3>Credit Note Feb 17, 2015 </h3>
+                <div class="invoice-info">Transaction Number 8259345  : $120.00</div>
+                <ul class="invoice-nav">
+                  <li><a href="javascript:void(0);">View</a></li>
+                  <li><a href="javascript:void(0);">Download PDF</a></li>
+                  <!-- /invoice-nav -->
+                </ul>
+                <!-- /invoice-info-panel -->
+              </div>
+              <div class="col-lg-4 balance-info-panel">
+                <h4>Balance<span class="red-info">Open</span></h4>
+                <div class="balance-amt"> <i class="symbol">-</i><sup class="dollar-sign">$</sup>120.00 </div>
+                <!-- /balance-info-panel -->
+              </div>
+              <!-- / invoice-info-outr -->
+            </div>
+            <div class="row invoice-info-outr">
+              <div class="col-lg-8 invoice-info-panel">
+                <h3>Invoice Jan 24, 2015 </h3>
+                <div class="invoice-info">Transaction Number 8259312 : $200.00</div>
+                <div class="invoice-info">Due Jan 17, 2015 <span class="time overdue">(Overdue 10 Days)</span></div>
+                <ul class="invoice-nav">
+                  <li><a href="javascript:void(0);">View</a></li>
+                  <li><a href="javascript:void(0);">Download PDF</a></li>
+                  <!-- /invoice-nav -->
+                </ul>
+                <!-- /invoice-info-panel -->
+              </div>
+              <div class="col-lg-4 balance-info-panel">
+                <h4>Balance<span class="red-info">Unpaid Invoices</span></h4>
+                <div class="balance-amt"><i class="symbol">+</i><sup class="dollar-sign">$</sup>200.00 </div>
+                <span class="pay-process">$150.00 payment in process</span> <span class="pay-remaining">$ 50.00 balance remaining</span>
+                <!-- /balance-info-panel -->
+              </div>
+              <!-- / invoice-info-outr -->
+            </div>
+            <div class="row invoice-info-outr">
+              <div class="col-lg-8 invoice-info-panel">
+                <h3>Credit Note Jan 17, 2015</h3>
+                <div class="invoice-info">Transaction Number 8259212 : $200.00</div>
+                <ul class="invoice-nav">
+                  <li><a href="javascript:void(0);">View</a></li>
+                  <li><a href="javascript:void(0);">Download PDF</a></li>
+                  <!-- /invoice-nav -->
+                </ul>
+                <!-- /invoice-info-panel -->
+              </div>
+              <div class="col-lg-4 balance-info-panel">
+                <h4>Balance<span class="green-info">Applied</span></h4>
+                <!-- /balance-info-panel -->
+              </div>
+              <!-- / invoice-info-outr -->
+            </div>
+            <div class="row invoice-info-outr">
+              <div class="col-lg-8 invoice-info-panel">
+                <h3>Invoice Dec 24, 2015</h3>
+                <div class="invoice-info">Transaction Number 8259430 : $2,700.00</div>
+                <div class="invoice-info">Due Jan 17, 2015</div>
+                <ul class="invoice-nav">
+                  <li><a href="javascript:void(0);">View</a></li>
+                  <li><a href="javascript:void(0);">Download PDF</a></li>
+                  <!-- /invoice-nav -->
+                </ul>
+                <!-- /invoice-info-panel -->
+              </div>
+              <div class="col-lg-4 balance-info-panel">
+                <h4>Balance<span class="red-info">Unpaid Invoices</span></h4>
+                <div class="balance-amt"><i class="symbol">+</i><sup class="dollar-sign">$</sup>2700.00 </div>
+                <span class="pay-process">Full payment in process</span>
+                <!-- /balance-info-panel -->
+              </div>
+              <!-- / invoice-info-outr -->
+            </div>
+            <div class="row invoice-info-outr">
+              <div class="col-lg-8 invoice-info-panel">
+                <h3>Invoice Nov 24, 2015</h3>
+                <div class="invoice-info">Transaction Number 8259430 : $1,600.00</div>
+                <div class="invoice-info">Due Dec 17, 2015</div>
+                <ul class="invoice-nav">
+                  <li><a href="javascript:void(0);">View</a></li>
+                  <li><a href="javascript:void(0);">Download PDF</a></li>
+                  <!-- /invoice-nav -->
+                </ul>
+                <!-- /invoice-info-panel -->
+              </div>
+              <div class="col-lg-4 balance-info-panel">
+                <h4>Balance<span class="green-info">Paid</span></h4>
+                <div class="balance-amt paid"> Paid in Full</div>
+                <!-- /balance-info-panel -->
+              </div>
+              <!-- / invoice-info-outr -->
+            </div>
+            <!-- / invoice-smry-panel -->
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="paymentSettings"> Invoices Payments </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

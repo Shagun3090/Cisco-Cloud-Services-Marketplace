@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>CISCO</title>
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="css/jquery.fancybox.css" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<!-- jquery script -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<!-- bootstrap script -->
+<script src="js/bootstrap.min.js"></script>
+<!-- custom script files-->
+<script src="js/html5.js"></script>
+<script src="js/jquery.selectbox-0.1.3.js"></script>
+<script src="js/custom-radio-check.js"></script>
+<script src="js/jquery.tipsy.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/fancybox/jquery.fancybox.js"></script>
+<script src="js/script.js"></script>
+</head>
+<!--Email validation page -->
+<body  class="has-js">
+<header class="container-fluid">
+  <div class="container-fluid">
+    <div class="container header-container">
+      <div class="row">
+        <div class="col-lg-8 header-top-left"> <a class="logo" href="javascript:void(0);"> <img src="images/cisco-logo.png" alt="Logo"></a> <i>Cloud Services</i> </div>
+        <div class="col-md-4 header-top-right">
+          <ul>
+            <li><a href="javascript:void(0);">John Smith</a></li>
+            <li><a href="javascript:void(0);">Catalog</a></li>
+            <li><a href="javascript:void(0);">Console</a></li>
+            <li><a href="javascript:void(0);">Support <i></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+<div class="clearfix"></div>
+<div class="container-fluid user-dashboard">
+  <div class="container-fluid user-dashboard-content"> Management Portal
+    <!-- /user-dashboard-content -->
+  </div>
+  <div class="clearfix"></div>
+  <div class="container-fluid user-dashboard-nav-outr">
+    <div class="container user-dashboard-nav-inner">
+      <ul class="user-dashboard-nav">
+        <li><a href="javascript:void(0);">Purchased Services</a></li>
+        <li><a href="javascript:void(0);">My Profile</a></li>
+        <li><a href="javascript:void(0);">Billing</a></li>
+        <li class="active"><a href="javascript:void(0);">Users</a></li>
+        <!-- /user-dashboard-nav -->
+      </ul>
+      <!-- /user-dashboard-nav-inner -->
+    </div>
+    <!-- /user-dashboard-nav-outr -->
+  </div>
+  <!-- /user-dashboard -->
+</div>
+<div class="clearfix"></div>
+<div class="cotainer-fluid add-user-panel-outr">
+  <div class="container tab-panel-container acc-management-panel">
+    <button class="btn blue-btn middle-btn add-btn">Add</button>
+  </div>
+  <div class="container-fluid add-user-panel">
+    <div class="container add-user-panel-inner"> <i class="top-edge-arow"></i>
+      <div class="row user-detail-panel">
+        <div class="col-lg-5 user-info bold-name">
+          <h3>Enter User's Email<span>*</span></h3>
+          <input type="text" placeholder="Enter Email" id="inputEmailUser" class="email-input-lg error">
+          <span class="user-field-error">jsmith@cisco.com is an inactive user and cannot be added.</span>
+          <!-- /user-info -->
+        </div>
+        <div class="col-lg-7 user-role-box">
+          <div class="row user-role-area">
+            <div class="user-edit-view add-user-assignrole">
+              <h4>Assign Roles<span>*</span></h4>
+              <p class="option-selection">Please select atleast one role.</p>
+              <div class="col-lg-5  edit-user-role  account-role">
+                <h5>Account Roles <i class="info-icon"></i></h5>
+                <div class="custom-tooltip"> <span class="arrow"></span>
+                  <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                  <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                  <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+                </div>
+                <div class="row add-user-label">
+                  <div class="col-lg-12 ">
+                    <label class="label_check">
+                    <input class="checkInfoBox" value="remember-me" type="checkbox">
+                    </label>
+                    <span> Billing Administrator</span> </div>
+                </div>
+                <div class="row add-user-label">
+                  <div class="col-lg-12">
+                    <label class="label_check">
+                    <input class="checkInfoBox" value="remember-me" type="checkbox">
+                    </label>
+                    <span>User Administrator</span> </div>
+                </div>
+                <div class="row add-user-label">
+                  <div class="col-lg-12">
+                    <label class="label_check">
+                    <input class="checkInfoBox" value="remember-me" type="checkbox">
+                    </label>
+                    <span>Buyer</span> </div>
+                </div>
+              </div>
+              <div class="col-lg-5  edit-user-role project-role">
+                <h5>Project Roles <i class="info-icon"></i></h5>
+                <div class="custom-tooltip"> <span class="arrow"></span>
+                  <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                  <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                  <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+                </div>
+                <div class="row add-user-label">
+                  <div class="col-lg-12">
+                    <label class="label_check">
+                    <input class="checkInfoBox" value="remember-me" type="checkbox">
+                    </label>
+                    <span>Administrator</span> </div>
+                </div>
+                <div class="row add-user-label">
+                  <div class="col-lg-12">
+                    <label class="label_check">
+                    <input class="checkInfoBox" value="remember-me" type="checkbox">
+                    </label>
+                    <span>User</span> </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-btn">
+                <button class="btn blue-btn right-btn update-record" type="submit">Add</button>
+                <button class="btn grey-btn middle-btn cancel-updates">Cancel</button>
+              </div>
+              <div id="add-user-popup" style="display:none;">
+                <p>Email has been sent to jsmith@cisco.com</p>
+                <div class="form-btn">
+                  <button class="btn blue-btn right-btn" type="submit" onClick="$.fancybox.close()">Dismiss</button>
+                  <button class="btn grey-btn middle-btn">Undo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /user-role-box -->
+        </div>
+        <!-- /user-detail-panel -->
+      </div>
+    </div>
+    <!-- /add-user-panel -->
+  </div>
+  <!-- /add-user-panel-outr -->
+</div>
+<div class="clearfix"></div>
+<div class="cotainer-fluid">
+  <div class="container users-list-wrapper tab-panel-container acc-management-panel">
+    <div class="row user-controls">
+      <div class="col-lg-2 remove-btn-box">
+        <button class="btn grey-btn middle-btn remove-records disable-btn">Remove</button>
+        <!-- /remove-btn-box -->
+      </div>
+      <div class="col-lg-7 user-search-area">
+        <div class="acc-user-search">
+          <button class="acc-search-icon"></button>
+          <input type="search" placeholder="Search by User ID or email">
+        </div>
+        <!-- /user-search-area -->
+      </div>
+      <div class="col-lg-3 user-role-box search-area">
+        <select class="moreCategoriesSelect">
+          <option value="Role 1" selected="">Filter By Roles</option>
+          <option value="Role 2">Role 2</option>
+          <option value="Role 3">Role 3</option>
+          <option value="Role 4">Role 4</option>
+          <option value="Role 5">Role 5</option>
+        </select>
+        <!-- /user-role-box -->
+      </div>
+      <!-- /user-controls -->
+    </div>
+    <div class="row user-detail-panel">
+      <div class="col-lg-1 check-option">
+        <label class="label_check">
+        <input class="checkInfoBox" value="remember-me" type="checkbox">
+        </label>
+        <!-- /check-option -->
+      </div>
+      <div class="col-lg-5 user-info bold-name">
+        <h3>Anthony Ben</h3>
+        <span class="user-sub-details">User ID: <span class="user-id">anthonyb</span> </span> <span class="user-sub-details">Email ID: <span class="user-email">anthony.ben@gmail.com</span> </span>
+        <!-- /user-info -->
+      </div>
+      <div class="col-lg-6 user-role-box">
+        <div class="user-panel-view">
+          <h4>Roles <a class="edit-role" href="javascript:void(0);">Edit</a></h4>
+          <span class="user-sub-details">Tenant Admin</span> <span class="user-sub-details">Billing Admin</span> </div>
+        <div class="row user-role-area">
+          <div class="user-edit-view">
+            <h4>Edit Roles</h4>
+            <div class="col-lg-6  edit-user-role  account-role">
+              <h5>Account Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Billing Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Buyer</span> </div>
+              </div>
+            </div>
+            <div class="col-lg-6  edit-user-role project-role">
+              <h5>Project Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User</span> </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-btn">
+              <button class="btn blue-btn right-btn update-record" type="submit">Update</button>
+              <button class="btn grey-btn middle-btn cancel-updates">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <!-- /user-role-box -->
+      </div>
+      <!-- /user-detail-panel -->
+    </div>
+    <div class="row user-detail-panel">
+      <div class="col-lg-1 check-option">
+        <label class="label_check">
+        <input class="checkInfoBox" value="remember-me" type="checkbox">
+        </label>
+        <!-- /check-option -->
+      </div>
+      <div class="col-lg-5 user-info">
+        <h4>Benjamin Frank</h4>
+        <span class="user-sub-details">User ID: <span class="user-id">benjaminf</span> </span> <span class="user-sub-details">Email ID: <span class="user-email">benjamin.frank@gmail.com</span> </span>
+        <!-- /user-info -->
+      </div>
+      <div class="col-lg-6 user-role-box">
+        <div class="user-panel-view">
+          <h4>Roles <a class="edit-role" href="javascript:void(0);">Edit</a></h4>
+          <span class="user-sub-details">User</span></div>
+        <div class="row user-role-area">
+          <div class="user-edit-view">
+            <h4>Edit Roles</h4>
+            <div class="col-lg-6  edit-user-role  account-role">
+              <h5>Account Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Billing Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Buyer</span> </div>
+              </div>
+            </div>
+            <div class="col-lg-6  edit-user-role project-role">
+              <h5>Project Roles<i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User</span> </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-btn">
+              <button class="btn blue-btn right-btn update-record" type="submit">Update</button>
+              <button class="btn grey-btn middle-btn cancel-updates">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <!-- /user-role-box -->
+      </div>
+      <!-- /user-detail-panel -->
+    </div>
+    <div class="row user-detail-panel">
+      <div class="col-lg-1 check-option">
+        <label class="label_check">
+        <input class="checkInfoBox" value="remember-me" type="checkbox">
+        </label>
+        <!-- /check-option -->
+      </div>
+      <div class="col-lg-5 user-info">
+        <h4>John Doe</h4>
+        <span class="user-sub-details">User ID: <span class="user-id">john</span> </span> <span class="user-sub-details">Email ID: <span class="user-email">johndoe@gmail.com</span> </span>
+        <!-- /user-info -->
+      </div>
+      <div class="col-lg-6 user-role-box">
+        <div class="user-panel-view">
+          <h4>Roles <a class="edit-role" href="javascript:void(0);">Edit</a></h4>
+          <span class="user-sub-details">Biiling Admin</span> <span class="user-sub-details">User Admin</span> </div>
+        <div class="row user-role-area">
+          <div class="user-edit-view">
+            <h4>Edit Roles</h4>
+            <div class="col-lg-6  edit-user-role  account-role">
+              <h5>Account Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Billing Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Buyer</span> </div>
+              </div>
+            </div>
+            <div class="col-lg-6  edit-user-role project-role">
+              <h5> Project Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User</span> </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-btn">
+              <button class="btn blue-btn right-btn update-record" type="submit">Update</button>
+              <button class="btn grey-btn middle-btn cancel-updates">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <!-- /user-role-box -->
+      </div>
+      <!-- /user-detail-panel -->
+    </div>
+    <div class="row user-detail-panel margin-bottom">
+      <div class="col-lg-1 check-option">
+        <label class="label_check">
+        <input class="checkInfoBox" value="remember-me" type="checkbox">
+        </label>
+        <!-- /check-option -->
+      </div>
+      <div class="col-lg-5 user-info">
+        <h4>Julie Hill</h4>
+        <span class="user-sub-details">User ID: <span class="user-id">julieh</span> </span> <span class="user-sub-details">Email ID: <span class="user-email">juliehill@gmail.com</span> </span>
+        <!-- /user-info -->
+      </div>
+      <div class="col-lg-6 user-role-box">
+        <div class="user-panel-view">
+          <h4>Roles <a class="edit-role" href="javascript:void(0);">Edit</a></h4>
+          <span class="user-sub-details">Buyer</span> <span class="user-sub-details">User Admin</span> </div>
+        <div class="row user-role-area">
+          <div class="user-edit-view">
+            <h4>Edit Roles</h4>
+            <div class="col-lg-6  edit-user-role  account-role">
+              <h5>Account Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Billing Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Buyer</span> </div>
+              </div>
+            </div>
+            <div class="col-lg-6  edit-user-role project-role">
+              <h5> Project Roles <i class="info-icon"></i></h5>
+              <div class="custom-tooltip"> <span class="arrow"></span>
+                <p>Billing Administrator – Able to view and edit account payment methods and invoices.</p>
+                <p>User Administrator – Able to add new users to the account and set account roles.</p>
+                <p> Buyer – Able to buy new applications and services from the Cisco Cloud Marketplace.</p>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>Administrator</span> </div>
+              </div>
+              <div class="row add-user-label">
+                <div class="col-lg-12">
+                  <label class="label_check">
+                  <input class="checkInfoBox" value="remember-me" type="checkbox">
+                  </label>
+                  <span>User</span> </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-btn">
+              <button class="btn blue-btn right-btn update-record" type="submit">Update</button>
+              <button class="btn grey-btn middle-btn cancel-updates">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <!-- /user-role-box -->
+      </div>
+      <!-- /user-detail-panel -->
+    </div>
+    <!-- /users-list-wrapper -->
+  </div>
+  <div id="remove-popup" class="delete-user" style="display:none;">
+    <h3>Delete User</h3>
+    <p>Are you sure want to delete user anthony.ben@gmail.com?</p>
+    <div class="form-btn">
+      <button class="btn grey-btn">Cancel</button>
+      <button class="btn blue-btn" type="submit">Delete</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
